@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid'
 
 export const AddTransaction = () => {
     const [text, setText] = useState('');
-    const [amount, setAmount] = useState(0)
+    const [amount, setAmount] = useState()
 
     const { addTransaction } = useContext(GlobalContext)
     console.log('addT:', addTransaction)
@@ -19,7 +19,8 @@ export const AddTransaction = () => {
             amount: +amount //to convert string to a number
         }
         addTransaction(newTransaction)
-        console.log('newT', newTransaction, 'id:', newTransaction.id)
+        setText('')
+        setAmount('')
     }
     return (
         <>
