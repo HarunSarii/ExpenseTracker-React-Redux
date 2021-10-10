@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react'
 import { GlobalContext } from '../context/GlobalState'
 import { v4 as uuid } from 'uuid'
+import { addInfo } from '../utils/functions';
 
 
 export const AddTransaction = () => {
@@ -21,6 +22,7 @@ export const AddTransaction = () => {
         addTransaction(newTransaction)
         setText('')
         setAmount('')
+        // addInfo()
     }
     return (
         <>
