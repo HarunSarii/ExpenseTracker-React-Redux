@@ -1,3 +1,15 @@
+How would you deploy such an application on production?
+You can use Github-pages and Heroku to deploy react applications for free. I will briefly explain how to deploy our app on Github-pages:
+
+1. Install gh-pages (yarn add gh-pages)
+2. Open package.json and add “homepage”: “http://{Github-username}.github.io/{Github-repo-name}"
+3. Deploy scripts under package.json file : “scripts”: { “predeploy”: “yarn build”, “deploy”: “gh-pages -d build” }
+4. Create build folder (yarn run build)
+5. Push changes to GitHub repo
+6. Create gh-pages branch
+7. Deploy it to GitHub Pages (yarn run deploy)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
